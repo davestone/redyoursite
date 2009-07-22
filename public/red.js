@@ -1,0 +1,10 @@
+/* This work is licensed under a BSD License.
+ * http://www.opensource.org/licenses/bsd-license.php
+ * Copyright 2008 David Stone & Josh Russell. All rights reserved.
+ *
+ * Thank to:
+ * Remy Sharp - http://remysharp.com
+ * Premasagar Rose - http://premasagar.com
+ */
+ 
+(function(){var d=(function(){return document.body.addEventListener?function(e,a,b){e.addEventListener(a,b,false)}:document.body.attachEvent?function(e,a,b){e.attachEvent("on"+a,b)}:function(a){var o=window.onload;if(typeof window.onload!='function'){window.onload=a}else{if(typeof func=='function'){window.onload=function(){o();a()}}}}})();d(window,'load',function(){var a='strong,em,p,h1,h2,h3,h4,h5,h6,li,div,blockquote,cite,dt,label,legend,q,sub,sup,td,td,body'.split(',');var b=document.createElement('a');b.style.cursor='pointer';b.style.color='#c00';b.style.fontWeight='bold';b.style.textDecoration='none';b.style.fontStyle='normal';b.href='http://www.joinred.com?entry=redyoursite&referrer='+window.location.hostname;b.appendChild(t('(red)'));function t(s){return document.createTextNode(s)}var c=/(\(red\)|red)/ig,i=a.length,j=0,k=0,l=0,source='',parts=[],el=null,frag=null;while(i--){el=document.getElementsByTagName(a[i]);j=el.length;while(j--){k=el[j].childNodes.length;while(k--){if(el[j].childNodes[k].nodeName=='#text'&&c.test(el[j].childNodes[k].nodeValue)){source=el[j].childNodes[k].nodeValue;if(/^(\(red\)|red)/i.test(source)){source='__MARKER__'+source}if(/(\(red\)|red)$/i.test(source)){source=source+'__MARKER__'}parts=source.split(/(\(red\)|red)/i);frag=document.createDocumentFragment();l=0;for(l=0;l<parts.length;l++){if(c.test(parts[l])){continue}if(parts[l]!='__MARKER__'){frag.appendChild(t(parts[l]));if(l!=parts.length-1){frag.appendChild(b.cloneNode(true))}}else if(l==0&&parts[l]=='__MARKER__'){frag.appendChild(b.cloneNode(true))}}el[j].replaceChild(frag,el[j].childNodes[k])}}}}})})();

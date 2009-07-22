@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule red.js http://code.redyoursite.com/red.js [L,R=301]
+</IfModule>
